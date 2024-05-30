@@ -1,0 +1,488 @@
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+
+.wrapper *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: url(/static/images/image1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh; /*110vh*/
+    background: rgba(39, 39, 39, 0.4);
+}
+
+.nav{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(39,39,39, 0.6), transparent);
+    z-index: 100;
+}
+
+.nav-logo p{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.nav-menu ul{
+    display: flex;
+}
+
+.nav-menu ul li{
+    list-style-type: none;
+}
+
+.nav-menu ul li .link{
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 15px;
+    margin: 0 25px;
+}
+
+.link:hover, .active{
+    border-bottom: 2px solid #fff;
+}
+
+.nav-button .btn{
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.btn:hover{
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.btn.white-btn{
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.btn.btn.white-btn:hover{
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.nav-menu-btn{
+    display: none;
+}
+
+.btn-shopping-car{
+    padding: 10px 15px;
+    border: none;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-shopping-car:hover{
+    transform: scale(1.5);
+}
+
+.btn-shopping-car img{
+    width: 20px;
+    height: 20px;
+}
+
+.form-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 512px;
+    height: 420px;
+    overflow: hidden;
+    z-index: 2;
+    min-height: 110vh; /* new add*/
+}
+
+.login-container{
+    position: absolute;
+    left: 4px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+
+.register-container{
+    position: absolute;
+    right: -520px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+
+.top span{
+    color: #fff;
+    font-size: small;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.top span a{
+    font-weight: 500;
+    color: #fff;
+    margin-left: 5px;
+}
+
+header{
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0 30px 0;
+}
+
+.two-forms{
+    display: flex;
+    gap: 10px;
+}
+
+.input-field{
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    height: 50px;
+    width: 100%;
+    padding: 0 10px 0 45px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    transition: .2s ease;
+}
+
+.input-field:hover, .input-field:focus{
+    background: rgba(255, 255, 255, 0.25);
+}
+
+::-webkit-input-placeholder{
+    color: #fff;
+}
+
+.input-box i{
+    position: relative;
+    top: -35px;
+    left: 17px;
+    color: #fff;
+}
+
+.submit{
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.submit:hover{
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+
+.two-col{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: small;
+    margin-top: 10px;
+}
+
+.two-col .one{
+    display: flex;
+    gap: 5px;
+}
+
+.two label a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.two label a:hover{
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 786px){
+    .nav-button{
+        display: none;
+    }
+    .nav-menu.responsive{
+        top: 100px;
+    }
+    .nav-menu{
+        position: absolute;
+        top: -800px;
+        display: flex;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.2);
+        width: 100%;
+        height: 90vh;
+        backdrop-filter: blur(20px);
+        transition: .3s;
+    }
+    .nav-menu ul{
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-menu-btn{
+        display: block;
+    }
+    .nav-menu-btn i{
+        font-size: 25px;
+        color: #fff;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: .3s;
+    }
+    .nav-menu-btn i:hover{
+        background: rgba(255, 255, 255, 0.15);
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .wrapper{
+        min-height: 100vh;
+    }
+    .form-box{
+        width: 100%;
+        height: 500px;
+    }
+    .register-container, .login-container{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .register-container .two-forms{
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* older version */
+/* h1{
+    color: white;
+    position: absolute;
+    left: 120px;
+    top: 0;
+    line-height: 80px;
+    background-image: url();
+}
+
+.main-header{
+    background-color: brown;
+    height: 80px;
+    width: 100%;
+}
+
+.menu-container{
+    position:absolute;
+    left: 20vw;
+    top: 0;
+    line-height: 80px;
+}
+
+.menu-container a{
+    color: white;
+    text-decoration: none;
+}
+
+.menu-container a:hover{
+    text-decoration: underline;
+}
+
+.menu-item{
+    display: inline-block;
+    margin-right: 4vw;
+}
+
+.member-shopping{
+    position: absolute;
+    right: 5vw;
+    top: 0;
+    line-height: 80px;
+}
+
+.member-shopping a{
+    color: white;
+    text-decoration: none;
+}
+
+.member-shopping a:hover{
+    text-decoration: underline;
+}
+.member-shopping-item{
+    display: inline-block;
+    margin-right: 4vw;
+} */
+
+/* ----------------footer------------------ */
+footer{
+    left: 0; /*new add*/
+    bottom: 0; /*new add*/
+    position: relative; /*new add*/
+    padding: 0;
+    margin: 0;
+    background-color: #9d8189;
+    text-align: center;
+}
+
+.footer-h4{
+    color: #DEB887;
+    font-size: 20px;
+    justify-content: space-between;
+    margin-left: 50px;
+}
+
+.main-footer{
+    width: 100%;
+    float: left;
+    overflow: auto;
+}
+
+.footer-block1{
+    width:33%;  
+    float:left;
+    margin: 25px 0;
+}
+
+.footer-block1 a{
+    color: black;
+    text-decoration: none;
+}
+
+.footer-block1 a:hover{
+    text-decoration: underline;
+}
+
+.footer-block2{
+    width:33%;  
+    float:left;
+    margin: 25px 0;
+}
+
+.footer-block2 a{
+    color: black;
+    text-decoration: none;
+}
+
+.footer-block2 a:hover{
+    text-decoration: underline;
+}
+
+.footer-block3{
+    width:33%;  
+    float:left;
+    margin: 25px 0;
+}
+
+.footer-block3 a{
+    color: black;
+    text-decoration: none;
+}
+
+.footer-block3 a:hover{
+    text-decoration: underline;
+}
+
+.no-bullets{
+    list-style-type: none;
+}
+
+.copyrights{
+    color: black;
+    position: relative;
+    right: 10lvw;
+    display:inline-flex;
+    justify-content: left;
+    /* align-items: center; */
+    margin: 25px 0;
+}
+
+.telephone{
+    color: black;
+    position: relative;
+    left: 10lvw;
+    display:inline-flex;
+    justify-content: right;
+    /* align-items: center; */
+    margin: 25px 0;
+}
+
+/* -----------下拉式選單------------ */
+/* 下拉式選單容器 */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* 下拉式選單內容 */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7); /* 背景微透明 */
+    min-width: 120px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px; /* 圓邊框 */
+    text-align: center; /* 字體置中 */
+    border: 2px solid transparent; /* 透明邊框 */
+}
+
+/* 鼠標懸停時的下拉式選單 */
+.dropdown:hover .dropdown-content {
+    display: block;
+    border: 2px solid black; /* 鼠標懸停時的邊框 */
+}
+
+/* 鏈接樣式 */
+.dropdown-content a {
+    color: black;
+    padding: 4px 6px;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+}
+
+/* 鏈接懸停時的背景顏色 */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* 按下鏈接時的背景顏色 */
+.dropdown-content a:active {
+    background-color: #e9e9e9;
+}

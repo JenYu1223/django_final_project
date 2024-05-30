@@ -1,0 +1,54 @@
+<!-- templates/yourapp/item_form.html -->
+
+{% include 'home.html' %}
+
+
+<!-- <h2>選擇課程</h2>
+<form method="POST">
+  {% csrf_token %}
+  <div style="display: flex; justify-content: space-between;">
+    <div>
+      <h3>{{ math_form.main_item.value }}</h3>
+      {{ math_form.sub_items }}
+      <div>
+        {{ math_form.custom_input.label_tag }}
+        {{ math_form.custom_input }}
+      </div>
+    </div>
+    <div>
+      <h3>{{ chinese_form.main_item.value }}</h3>
+      {{ chinese_form.sub_items }}
+      <div>
+        {{ chinese_form.custom_input.label_tag }}
+        {{ chinese_form.custom_input }}
+      </div>
+    </div>
+  </div>
+  <button type="submit">Submit</button>
+</form> -->
+
+<h2>選擇課程</h2>
+<form method="post">
+  {% csrf_token %}
+  <div style="display: flex; justify-content: space-between;">
+    <div>
+      {{ math_form.main_item }}
+      <h3>數學</h3>
+      {{ math_form.sub_items }}
+      <div>
+        {{ math_form.custom_input.label_tag }}
+        {{ math_form.custom_input }}
+      </div>
+    </div>
+    <div>
+      {{ chinese_form.main_item }}
+      <h3>國文</h3>
+      {{ chinese_form.sub_items }}
+      <div>
+        {{ chinese_form.custom_input.label_tag }}
+        {{ chinese_form.custom_input }}
+      </div>
+    </div>
+  </div>
+  <button type="submit">Submit</button>
+</form>
